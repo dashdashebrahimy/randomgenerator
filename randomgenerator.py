@@ -17,7 +17,7 @@ def mid_square_method(n, u):
             start = k // 2
         u_str = u_str[start:start + k]
         u = int(u_str)
-        results.append(u)
+        results.append(u//(10**k)
         i -= 1
     return results
 
