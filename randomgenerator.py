@@ -1,3 +1,4 @@
+
 import streamlit as st
 st.set_page_config(layout="wide")
 
@@ -14,17 +15,17 @@ def mid_square_method(n, u):
         if k % 2:
             start = (k - 1) // 2
         else:
-            start = k // 2
+            start = k // 2 
         u_str = u_str[start:start + k]
         u = int(u_str)
-        results.append(u//(10**k)
+        results.append(u)
         i -= 1
     return results
 
 # ----Streamlit app----
 st.title("Mid-Square Random Number Generator")
 n = st.number_input("Enter the sample size (n):", min_value=1)
-u = st.number_input("Enter the initial seed (u):")
+u = st.number_input("Enter the initial seed (u):", min_value=1)
 if st.button("Generate Random Numbers"):
     results = mid_square_method(n, u)
     st.write("Generated Numbers:")
