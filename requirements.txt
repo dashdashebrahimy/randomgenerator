@@ -1,1 +1,3 @@
 streamlit
+write 
+streamlit run "file path" in your cmd
